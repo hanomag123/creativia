@@ -1270,11 +1270,96 @@ html, body, .site {
     background-color: #262626;
     line-height: 40px;
 }
+.plans__containerItem:hover {
+    cursor: pointer;
+}
 .plans__containerItem:hover .plans__containerItem-block:nth-child(2){
     background-color: #ff0036;
     color: #fff;
     border: 1px solid #ff0036;
 }
 .plans__containerItem:hover .plans__containerItem-block:last-child div{
+    background-color: #ff0036;
+}
+
+.twitter {
+    position: relative;
+    height: 297px;
+    width: 100%;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/twitter/twitterBG.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.twitter__discription {
+    margin-top: 20px;
+    width: 50%;
+    text-align: center;
+}
+
+.ourBlog {
+    height: 915px;
+    width: 100%;
+    background-color: #fff;
+}
+.ourBlog__item {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    height: 200px;
+    justify-content: space-between;
+}
+.ourBlog__img {
+    margin-right: 30px;
+    position: relative;
+}
+.ourBlog__itemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.ourBlog__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #505050;
+}
+.ourBlog__wrapper {
+    display: flex;
+}
+.ourBlog__wrapper-item {
+    display: flex;
+    position: relative;
+}
+.ourBlog__wrapper-item:not(:last-child) {
+    margin-right: 22px;
+}
+.ourBlog__wrapper-item img {
+    margin-right: 8px;
+}
+.ourBlog__wrapper-item .discriptionLightGrey {
+    font-size: 12px;
+}
+.ourBlog__discription {
+    font-size: 16px;
+}
+.ourBlog__button {
+    border: 0;
+    background-color: #262626;
+    width: 120px;
+    height: 40px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.ourBlog__scrollButton div {
+    background-color: #f036;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.ourBlog__item:hover button {
     background-color: #ff0036;
 }
