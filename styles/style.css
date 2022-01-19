@@ -494,30 +494,81 @@ html, body, .site {
 
     position: relative;
 }
-.about__container-item__column::after {
-    content: '';
-    position: absolute;
-    height: 0px;
-    width: 46px;
-    border: 22px solid transparent;
-    border-bottom: 38px solid #262626;
-    
-    bottom: 82%;
-    left: 33%;
+.about__container-item__hex {
+    position: relative;
+    width: 89px;
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.about__container-item__column::before {
+.about__container-item__hex img {
+    z-index: 3;
+}
+.about__container-item__hexSecond {
+    width: 86px;
+    height: 72px;
+    position: absolute;
+}
+.about__container-item__hexWhite::after {
     content: '';
     position: absolute;
     height: 0px;
-    width: 46px;
-    border: 22px solid transparent;
-    border-top: 38px solid #262626;
-    
-    bottom: 55%;
-    left: 33%;
+    width: 40px;
+    border: 21.5px solid transparent;
+    border-bottom: 36px solid #fff;
+    border-top: 0 solid transparent;
+    bottom: 50%;
+    left: 0%;
+    z-index: 1;
+}
+.about__container-item__hexWhite::before {
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 40px;
+    border: 21.5px solid transparent;
+    border-top: 37px solid #fff;
+    border-bottom: 0 solid transparent;
+    bottom: 0%;
+    left: 0;
+}
+.about__container-item__hexBlack::before{
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 43px;
+    border: 21.5px solid transparent;
+    border-top: 37px solid #262626;
+    border-bottom: 0 solid transparent;
+    bottom: 0%;
+    left: 0;
+}
+.about__container-item__hexBlack::after {
+    content: '';
+    position: absolute;
+    height: 0px;
+    width: 43px;
+    border: 21.5px solid transparent;
+    border-bottom: 37px solid #262626;
+    border-top: 0 solid transparent;
+    bottom: 50%;
+    left: 0%;
+    z-index: 1;
 }
 .about__discription-bot {
     text-align: center;
+}
+.about__container-item__column:hover .about__container-item__hexBlack::after {
+    border-bottom: 37px solid #ff0036;
+    z-index: 2;
+}
+.about__container-item__column:hover .about__container-item__hexBlack::before {
+    border-top: 37px solid #ff0036;
+    z-index: 2;
+}
+.about__container-item__column:not(:nth-child(1)):hover img {
+    filter: brightness(0) invert(1);
 }
 .portfolio {
     height: 100%;
@@ -1637,6 +1688,8 @@ html, body, .site {
     text-transform: uppercase;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 1px;
+
+    cursor: pointer;
 }
 .fineUs__foot {
     height: 80px;
