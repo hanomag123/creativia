@@ -148,7 +148,7 @@ html, body, .site {
 	background: #262626;
 	position: absolute;
     top: -29px;
-    left: 40%;
+    left: calc(50% - 50px);
     transform: scale(0.2) rotate(90deg);
 }
 .site__container-item-hexagon:before {
