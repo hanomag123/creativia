@@ -217,10 +217,27 @@
         align-items: center;
         margin-top: 10px;
     }
-}
+    .ourProduct__header-item:nth-child(2) {
+        display: none;
+    }
     .ourServices {
         height: 2300px;
     }
+    .portfolio__container {
+        height: 70%;
+        display: grid;
+        grid-template-areas: 
+        "money money bank" 
+        "flower card card"
+        "calc calc proc" 
+        "cash check check";
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .portfolio__container-item:hover .portfolio__container-item__discription {
+        display: none;
+    }
+}
 @media (max-width:315px) {
     .ourServices {
         height: 2500px;
