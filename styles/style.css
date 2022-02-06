@@ -233,6 +233,7 @@ html, body, .site {
     transform: rotate(315deg);
     cursor: pointer;
     transition: 0.5s ease;
+    z-index: 100;
 }
 .header__arrowLeft::before {
     content: '';
@@ -259,6 +260,7 @@ html, body, .site {
     transform: rotate(135deg);
     cursor: pointer;
     transition: 0.5s ease;
+    z-index: 100;
 }
 .header__arrowRight::before {
     content: '';
@@ -450,6 +452,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 1s ease-in-out;
 }
 .header__main__container {
     height: 240px;
