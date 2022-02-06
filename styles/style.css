@@ -274,22 +274,89 @@ html, body, .site {
     background-color: #a4a4a4;
     transition: 0.5s ease;
 }
-.header__menu {
-    position: absolute;
-    height: 19px;
+label {
+    height: 25px;
     width: 20px;
-    background-color: #fff;
-    top: 8%;
+}
+.header__block {
+    position: absolute;
+    height: 5px;
+    width: 25px;
+    background-color: transparent;
+    color: white;
+    top: calc(6% + 5px);
+    left: 5%;
+    z-index: 3;
+    transition: left 1s ease-in-out;
+    cursor: pointer;
+}
+.header__block1 {
+    position: absolute;
+    height: 5px;
+    width: 25px;
+    background-color: transparent;
+    color: white;
+    top: calc(6% - 5px);
+    left: 5%;
+    z-index: 3;
+    transition: left 1s ease-in-out;
+    cursor: pointer;
+}
+.header__menu {
+    cursor: pointer;
+    position: absolute;
+    height: 5px;
+    width: 25px;
+    background-color: #a4a4a4;;
+    color: #a4a4a4;
+    top: 6%;
     left: 5%;
     z-index: 3;
     display: none;
+    transition: left 1s ease-in-out;
+    border-radius: 1px;
+}
+.header__menu::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    top: 10px;
+    background-color: currentColor;
+    border-radius: inherit;
+}
+.header__menu::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 5px;
+    bottom: 10px;
+    background-color: currentColor;
+    border-radius: inherit;
+}
+#check:checked ~ label .header__menu,
+#check:checked ~ label .header__block,
+#check:checked ~ label .header__block1 {
+    transform: rotate(45deg);
+    transition: 1s ease-in-out;
+}
+#check:checked ~ label .header__menu::before {
+    transform: rotate(270deg);
+    bottom: 0;
+}
+#check:checked ~ label .header__menu::after {
+    visibility: hidden;
+}
+#check:checked ~ label .header__menu{
+    color: #ff0036;
+    background-color: #ff0036;
 }
 #check:checked ~ .header__nav{
     height: 100%;
     width: 40%;
-    /* display: unset; */
     position: absolute;
     animation: trans 1s ease-in-out both alternate;
+    opacity: 0.97;
 }
 @keyframes trans {
     0% {
@@ -1445,7 +1512,7 @@ html, body, .site {
 .ourBlog .site__container {
     height: 90%;
     width: 60%;
-    min-width: 900px;
+    min-width: 835px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

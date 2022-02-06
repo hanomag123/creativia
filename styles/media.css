@@ -72,6 +72,66 @@
         height: unset;
     }
 }
+@media (min-width:837px) {
+    #check:checked ~ .header__nav {
+        background-color: #08080c;
+        opacity: 0.8;
+        width: 100%;
+        height: 67px;
+        border-top: 3px solid transparent;
+    }
+    #check:checked ~ .header__nav .header__nav__container,
+    #check:checked ~ .header__nav .header__nav__containerSecond {
+    display: flex;
+    flex-direction: row;
+}
+    #check:checked ~ .header__nav .header__nav__container .header__logo {
+        position: relative;
+    }
+    #check:checked ~ .header__nav .header__nav__container .header__logo img{
+        position: absolute;
+        top: -3px;
+    }
+    #check:checked ~ .header__nav .header__nav__containerSecond {
+        list-style: none;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+    
+        width: 70%;
+        height: 67px;
+    
+        text-align: center;
+    }
+    #check:checked ~ .header__nav .header__nav__container-item {
+        height: 67px;
+    }
+    #check:checked ~ .header__nav .header__nav__container-item a {
+        position: relative;
+        display: grid;
+        align-items: center;
+        height: 67px;
+        border-top: 3px solid transparent;
+        border-bottom: 2px solid transparent;
+        transition: 0.5s ease;
+    }
+    #check:checked ~ .header__nav .header__nav__container-item a:hover {
+        color: #fff;
+    }
+    #check:checked ~ .header__nav .header__nav__containerSecond .header__nav__container-item a:hover:before,
+    #check:checked ~ .header__nav .header__nav__containerSecond .header__nav__container-item a:focus-visible:before {
+        position: absolute;
+        left: 25%;
+        content: '';
+        width: 50%;
+        height: 67px;
+        border-top: 3px solid #ff0036;
+        border-bottom: 2px solid #ff0036;
+        transition: 0.5s ease;
+    }
+}
 @media (max-width:836px) {
     .site__container {
         max-width: none;
@@ -89,6 +149,7 @@
         width: 40%;
         position: absolute;
         animation: trans1 1s ease-in-out both alternate;
+        opacity: 0.97;
     }
     @keyframes trans1 {
         0% {
@@ -102,7 +163,6 @@
     .header__nav .header__logo img{
         position: relative;
         max-width: 100%;
-    
     }
     .header__nav .header__nav__container,
     .header__nav .header__nav__containerSecond {
@@ -234,6 +294,24 @@
     }
 }
 @media (max-width:460px) {
+    #check:checked ~ .header__nav{
+        width: 100%;
+    }
+    .header__nav{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        animation: trans1 1s ease-in-out both alternate;
+        opacity: 0.97;
+    }
+    @keyframes trans1 {
+        0% {
+            transform: translate(0);
+        }
+        100% {
+            transform: translate(-100%);
+        }
+    }
     .followCr {
         height: unset;
     }
