@@ -284,7 +284,7 @@ label {
     width: 25px;
     background-color: transparent;
     color: white;
-    top: calc(6% + 5px);
+    top: calc(3% + 5px);
     left: 5%;
     z-index: 3;
     transition: left 1s ease-in-out;
@@ -296,7 +296,7 @@ label {
     width: 25px;
     background-color: transparent;
     color: white;
-    top: calc(6% - 5px);
+    top: calc(3% - 5px);
     left: 5%;
     z-index: 3;
     transition: left 1s ease-in-out;
@@ -309,7 +309,7 @@ label {
     width: 25px;
     background-color: #a4a4a4;;
     color: #a4a4a4;
-    top: 6%;
+    top: 3%;
     left: 5%;
     z-index: 3;
     display: none;
