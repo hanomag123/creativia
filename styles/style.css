@@ -359,6 +359,7 @@ label {
     position: absolute;
     animation: trans 1s ease-in-out both alternate;
     opacity: 0.97;
+    z-index: 1000;
 }
 @keyframes trans {
     0% {

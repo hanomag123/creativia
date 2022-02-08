@@ -34,3 +34,4 @@ arrLeft.onclick = function() {
     elem.parentElement.style.transform = `translate(${value}vw)`;
 }
 
+
