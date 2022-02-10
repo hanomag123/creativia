@@ -317,6 +317,7 @@ label {
     display: none;
     transition: left 1s ease-in-out;
     border-radius: 1px;
+    z-index: 1001;
 }
 .header__menu::after {
     content: '';
