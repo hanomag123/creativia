@@ -1,5 +1,6 @@
 import {find, hide, DOM} from './scroll.js'
 import Accord from './accordion.js'
+import {loadBg as load} from './load.js'
 
 
 let arrRight = DOM.find('.header__arrowRight'),
@@ -45,3 +46,8 @@ let arrAcc = DOM.findAll('.about__accordion-item')
 
 
 Accord.init(arrAcc)
+
+let img = document.createElement('img');
+img.src = './images/header/headerBg.png';
+
+img.addEventListener('load', load)
