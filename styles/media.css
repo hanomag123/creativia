@@ -137,11 +137,6 @@
     }
 }
 @media (max-width:836px) {
-    .site__container {
-        max-width: none;
-        width: 95%;
-    }
-
     .header__menu {
         display: unset;
     }
@@ -291,10 +286,10 @@
 }
 @media (max-width:460px) {
     .site__upButton {
-        transform: scale(0.4);
+        transform: scale(1);
     }
     .site__upButton:hover {
-        transform: scale(0.5);
+        transform: scale(1.1);
     }
     #check:checked ~ .header__nav{
         width: 100%;
@@ -303,16 +298,8 @@
         height: 100%;
         width: 100%;
         position: absolute;
-        animation: trans1 1s ease-in-out both alternate;
+        transform: translate(-100%);
         opacity: 0.97;
-    }
-    @keyframes trans1 {
-        0% {
-            transform: translate(0);
-        }
-        100% {
-            transform: translate(-100%);
-        }
     }
     .followCr {
         height: unset;
