@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/media.css">
     <title>Creativia</title>
-    <script defer src="./script/script.js"></script>
+    <script defer type="module" src="./script/script.js"></script>
 </head>
 <body>
     <div class="site">
+        <div data-scroll=".header" class="site__upButton">
+            <div data-scroll=".header" class="site__arrowUp"></div>
+        </div>
         <header class="header">
             <div class="header__arrowLeft">
             </div>
@@ -32,14 +35,14 @@
                                 <img src="images/header/headerLogo.png" alt="logo">
                             </div>
                             <ul class="header__nav__containerSecond">
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">home</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">about us</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">portfolio</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">clients</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">team</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">services</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">Blog</a></li>
-                                <li class="header__nav__container-item"><a class="titleOne" href="#">Contact</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".header" class="titleOne" href="#">home</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".about" class="titleOne" href="#">about us</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".portfolio" class="titleOne" href="#">portfolio</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".ourClients" class="titleOne" href="#">clients</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".ourTeam" class="titleOne" href="#">team</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".ourServices" class="titleOne" href="#">services</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".ourBlog" class="titleOne" href="#">Blog</a></li>
+                                <li class="header__nav__container-item"><a data-scroll=".fineUs" class="titleOne" href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -85,25 +88,39 @@
                             <div class="about__container-item__left-top discriptionLightGrey">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros. Nulla mi ipsum, consequat commodo condimentum vitae, 
                             </div>
-                            <div class="about__container-item__left-middle">
-                                <div>
-                                    <div class="about__container-item__minus">
+                            <div class="about__accordion">
+                                <div class="about__accordion-item">
+                                    <div class="about__container-item__left-middle">
+                                        <div>
+                                            <div class="about__container-item__plus">
+                                            </div>
+                                        </div>
+                                        <div class="titleGreyLower">Hwo is creativia</div>
+                                    </div>
+                                    <div hidden class="about__accordion-content discriptionLightGrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
                                     </div>
                                 </div>
-                                <div class="titleRedLower">Hwo is creativia</div>
-                                <div class="discriptionLightGrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+                                <div class="about__accordion-item">
+                                    <div class="about__accordion-title">
+                                        <div class="about__container-item__plus"></div>
+                                        <div class="titleGreyLower">Experiences</div>
+                                    </div>
+                                    <div hidden class="about__accordion-content discriptionLightGrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+                                    </div>
+                                </div>
+                                <div class="about__accordion-item">
+                                    <div class="about__accordion-title">
+                                        <div class="about__container-item__plus"></div>
+                                        <div class="titleGreyLower">Learn more</div>
+                                    </div>
+                                    <div hidden class="about__accordion-content discriptionLightGrey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et dolor justo. Phasellus eu ligula ac nisl volutpat tincidunt. Vestibulum vitae rhoncus odio Fusce sed enim erat. Mauris dictum lorem eu tortor porta placerat. Suspendisse ac vestibulum eros.
+                                    </div>
                                 </div>
                             </div>
-                            <div class="about__container-item__left-bot">
-                                <div>
-                                    <div class="about__container-item__plus"></div>
-                                    <div class="titleGreyLower">Experiences</div>
-                                </div>
-                                <div>
-                                    <div class="about__container-item__plus"></div>
-                                    <div class="titleGreyLower">Learn more</div>
-                                </div>
-                            </div>
+                            <!-- <div class="about__container-item__left-bot">
+                                
+                                
+                            </div> -->
                         </div>
                         <div class="about__container-item__right">
                             <img src="images/about/aboutBg.png" alt="aboutImage">
@@ -761,7 +778,7 @@
         <div class="fineUs">
             <div class="ourProduct__header">
                 <div class="ourProduct__header-item">
-                    <span class="titleBlack">our</span> <span class="titleRed">Blog</span> 
+                    <span class="titleBlack">Fine</span> <span class="titleRed">Us</span> 
                 </div>
                 <div class="ourProduct__header-item discriptionGrey">
                     Lorem ipsum dolor sit amet, consectetur <span class="discriptionRed">adipiscing elit.</span> Integer sed magna vel velit dignissim luctus eu in urna. Dapibus egestas turpis.

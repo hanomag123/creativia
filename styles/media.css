@@ -1,4 +1,8 @@
 @media (min-width:1251px) {
+    .site__upButton {
+        width: 60px;
+        height: 60px;
+    }
     .ourTeam .site__container {
         width: 90%;
         max-width: 1200px;
@@ -148,16 +152,8 @@
         height: 100%;
         width: 40%;
         position: absolute;
-        animation: trans1 1s ease-in-out both alternate;
         opacity: 0.97;
-    }
-    @keyframes trans1 {
-        0% {
-            transform: translate(0);
-        }
-        100% {
-            transform: translate(-100%);
-        }
+        transform: translate(-100%);
     }
     
     .header__nav .header__logo img{
@@ -294,6 +290,12 @@
     }
 }
 @media (max-width:460px) {
+    .site__upButton {
+        transform: scale(0.4);
+    }
+    .site__upButton:hover {
+        transform: scale(0.5);
+    }
     #check:checked ~ .header__nav{
         width: 100%;
     }

@@ -134,7 +134,53 @@ html, body, .site {
     
     color: #262626;
 }
+.site__upButton {
+    width: 50px;
+    height: 50px;
 
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 1000;
+
+    background-color: #131313;
+    box-shadow: 0 0 1px #a4a4a4;
+    cursor: pointer;
+
+    transition: 0.5s ease;
+}
+.site__upButton:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease;
+}
+.site__arrowUp {
+    position: absolute;
+    right: calc(50% - 13.5px);
+    top: calc(50% + 3.5px);
+    background-color: #a4a4a4;
+    width: 21px;
+    height: 7px;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    transform-origin: right;
+    z-index: 1000;
+
+    transition: 0.5s ease;
+}
+.site__arrowUp::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background-color: inherit;
+    width: 7px;
+    height: 17px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.site__upButton:hover .site__arrowUp{
+    background-color: #ff0036;
+    transition: 0.5s ease;
+}
 .site__container-item:nth-of-type(3) {
     width: 50%;
     height: 1px;
@@ -317,7 +363,7 @@ label {
     display: none;
     transition: left 1s ease-in-out;
     border-radius: 1px;
-    z-index: 1001;
+    z-index: 1100;
 }
 .header__menu::after {
     content: '';
@@ -515,7 +561,6 @@ label {
     "minus title"
     "discription discription";
     grid-template-columns: 58px auto;
-    grid-template-rows: 44px minmax(89px, auto);
     align-items: center;
 
     margin-top: 45px;
@@ -525,7 +570,7 @@ label {
     border: 1px solid #e7e7e7;
     background-color: #f7f7f7;
 }
-.about__container-item__left-middle .titleRedLower {
+.about__container-item__left-middle .titleGreyLower {
     grid-area: title;
     border: 1px solid #e7e7e7;
     background-color: #f7f7f7;
@@ -556,7 +601,14 @@ label {
     height: 2px;
     background-color: #ff0036;
 }
-.about__container-item__left-bot > div{
+.about__accordion-item {
+    cursor: pointer;
+}
+.select .titleGreyLower{
+    color: #ff0036;
+    transition: 0.5s ease;
+}
+.about__accordion-title{
     display: grid;
     grid-template-columns: 58px auto;
     grid-template-rows: 44px;
@@ -565,6 +617,29 @@ label {
     background-color: #f7f7f7;
     margin-top: 10px;
 }
+.about__accordion-title .titleGreyLower {
+    padding-left: 30px;
+    line-height: 44px;
+    width: 100%;
+    border-left: 1px solid #e7e7e7;
+    box-sizing: border-box;
+}
+.select .about__container-item__left-middle .about__container-item__plus,
+.select .about__accordion-title .about__container-item__plus {
+    border: 1px solid #ff0036;
+    transition: 0.5s ease;
+}
+.select .about__container-item__left-middle .about__container-item__plus::before,
+.select .about__accordion-title .about__container-item__plus::before {
+    background-color: #ff0036;
+    transition: 0.5s ease;
+}
+.select .about__container-item__left-middle .about__container-item__plus::after,
+.select .about__accordion-title .about__container-item__plus::after {
+    transition: 0.5s ease;
+    transform: rotate(0deg);
+    background-color: #ff0036;
+}
 .about__container-item__plus {
     position: relative;
     width: 18px;
@@ -572,12 +647,15 @@ label {
     border-radius: 50%;
     border: 1px solid #262626;
     margin: 0 auto;
+    transition: 0.5s ease;
 }
 .about__container-item__left-bot .titleGreyLower {
     padding-left: 30px;
     height: 100%;
     line-height: 44px;
     border-left: 1px solid #e7e7e7;
+    box-sizing: border-box;
+    transition: 0.5s ease;
 }
 .about__container-item__plus::before {
     content: '';
@@ -587,6 +665,7 @@ label {
     width: 10px;
     height: 2px;
     background-color: #262626;
+    transition: 0.5s ease;
 }
 .about__container-item__plus::after {
     content: '';
@@ -597,6 +676,7 @@ label {
     height: 2px;
     background-color: #262626;
     transform: rotate(90deg);
+    transition: 0.5s ease;
 }
 .about__container-item__right {
     margin-left: 30px;
@@ -622,6 +702,11 @@ label {
     cursor: pointer;
 
     position: relative;
+}
+.about__accordion-content {
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
 }
 .about__container-item__hex {
     position: relative;
@@ -1827,4 +1912,7 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+*[hidden] {
+    display: none;
 }
